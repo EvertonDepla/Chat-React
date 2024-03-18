@@ -18,9 +18,19 @@ import {
 function App() {
 
   const [users, setUsers] = useState([]);
+  const [name, setName] = useState();
+  const [age, setAge] = useState();
 
   function addNewUser(){
-    setUsers([{id: Math.random(), name: 'Everton', age:23}])
+    setUsers([{id: Math.random(), name, age}])
+  }
+
+  function changeInputName(event){
+    setName(event.target.value)
+  }
+
+  function changeInputAge(event){
+    setAge(event.target.value)
   }
 
   return (
@@ -30,10 +40,10 @@ function App() {
         <H1>Olá!</H1>
 
         <InputLabel>Nome</InputLabel>
-        <Input placeholder='Nome' />
+        <Input onChange={changeInputName} placeholder='Nome' />
 
         <InputLabel>Idade</InputLabel>
-        <Input placeholder='Idade' />
+        <Input onChange={changeInputAge} placeholder='Idade' />
 
         <Button onClick={addNewUser}>Cadastrar<img alt="seta" src={Arrow} />
         </Button>
