@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import Backgroud from "../../assets/background1.svg"
+import Backgroud from "../../assets/background.svg"
 
 export const Container = styled.div`
     background: url("${Backgroud}");
@@ -24,6 +24,7 @@ export const ContainerItens = styled.div`
         rgba(255, 255, 255, 0.15) 100%
     );
     border-radius: 61px 61px 0px 0px;
+    backdrop-filter: blur(45px);
     padding: 50px 36px;
     display: flex;
     flex-direction: column;
@@ -40,37 +41,13 @@ export const H1 = styled.h1`
     margin-bottom: 80px;
 `;
 
-export const InputLabel = styled.p`
-   letter-spacing: -0.408px;
-   font-style: normal;
-   font-weight: bold;
-   font-size: 18px;
-   line-height: 22px;
-   color: #EEEEEE;
-`
-
-export const Input = styled.input`
-    background: rgba(255, 255, 255, 0.25);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 14px;
-    width: 342px;
-    height: 58px;
-    padding-left: 25px;
-    margin-bottom: 34px;
-    border: none;
-    outline: none;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 20px;
-    line-height: 28px;
-`;
-
 export const Button = styled.button`
     width: 342px;
     height: 74px;
-    background-color: rgba(0, 0, 0, 0.8);
+    margin-top: 120px;
+    background-color: transparent;
     border-radius: 14px;
-    border: none;
+    border: 1px solid white;
     font-style: normal;
     font-weight: bold;
     font-size: 17px;
@@ -88,6 +65,10 @@ export const Button = styled.button`
 
     &:active{
         opacity: 0.5;
+    }
+
+    img{
+        transform: rotate(180deg);
     }
 `;
 
