@@ -7,11 +7,12 @@ import Avatar from '../../assets/avatar.svg';
 import Arrow from '../../assets/arrow.svg';
 import Trash from '../../assets/trash.svg';
 
+import { H1 } from '../../components/styles';
+import ContainerItens from '../../components/ContainerItens';
+
 import {
   Container,
-  H1,
   Image,
-  ContainerItens,
   Button,
   User,
 } from './styles';
@@ -48,7 +49,7 @@ useEffect(() => {
   return (
     <Container>
       <Image alt='logo-image' src={Avatar} />
-      <ContainerItens>
+      <ContainerItens isBlur={true}>
         <H1>Usuários</H1>
 
         <ul>
