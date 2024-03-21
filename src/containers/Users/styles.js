@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { Link } from "react-router-dom/cjs/react-router-dom.min";
 import Backgroud from "../../assets/background.svg";
 
 export const Container = styled.div`
@@ -9,8 +8,8 @@ export const Container = styled.div`
     flex-direction: column;
     align-items: center;
     gap: 40px;
-    height: 100vh;
-    
+    height: 100%;
+    min-height: 100vh;
 `;
 
 export const Image = styled.img`
@@ -29,7 +28,8 @@ export const ContainerItens = styled.div`
     padding: 50px 36px;
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    height: 100%;
+    min-height: calc(100vh - 170px);
 `;
 
 export const H1 = styled.h1`
@@ -42,7 +42,7 @@ export const H1 = styled.h1`
     margin-bottom: 80px;
 `;
 
-export const Button = styled(Link)`
+export const Button = styled.button`
     width: 342px;
     height: 74px;
     margin-top: 120px;

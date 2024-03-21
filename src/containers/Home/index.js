@@ -1,4 +1,5 @@
 import React, { useState, useRef } from 'react';
+import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
 
 import axios from 'axios';
 
@@ -16,8 +17,8 @@ import {
 } from './styles';
 
 function App() {
-
   const [users, setUsers] = useState([]);
+  const history = useHistory();
   const inputName = useRef();
   const inputAge = useRef();
 
@@ -28,6 +29,8 @@ function App() {
     });
 
     setUsers([ ...users, newUser]);
+
+    history.push('/usuarios');
   }
 
   return (
@@ -42,7 +45,7 @@ function App() {
         <InputLabel>Idade</InputLabel>
         <Input ref={inputAge} placeholder='Idade' />
 
-         <Button to='/usuarios' onClick={addNewUser}>
+         <Button onClick={addNewUser}>
           Cadastrar<img alt="seta" src={Arrow} />
          </Button>
         
