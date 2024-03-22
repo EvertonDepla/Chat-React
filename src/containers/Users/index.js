@@ -9,11 +9,11 @@ import Trash from '../../assets/trash.svg';
 
 import { H1 } from '../../components/styles';
 import ContainerItens from '../../components/ContainerItens';
+import Button from '../../components/Button';
 
 import {
   Container,
   Image,
-  Button,
   User,
 } from './styles';
 
@@ -63,7 +63,7 @@ useEffect(() => {
           ))}
         </ul>
 
-        <Button onClick={goBackPage}>
+        <Button isBack={true} onClick={goBackPage}>
         <img alt="seta" src={Arrow} /> Voltar 
         </Button>
       </ContainerItens>
