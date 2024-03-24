@@ -35,7 +35,7 @@ useEffect(() => {
 
 
   async function deleteUser(userId) {
-    await axios.delete(`https://users-react-back-end.vercel.app/${userId}`);
+    await axios.delete(`https://users-react-back-end.vercel.app${userId}`);
 
     const newUsers = users.filter(user => user.id !== userId);
 

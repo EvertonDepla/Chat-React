@@ -24,7 +24,7 @@ function App() {
   const inputAge = useRef();
 
   async function addNewUser() {
-    const { data: newUser } = await axios.post("https://users-react-back-end.vercel.app/", {
+    const { data: newUser } = await axios.post("https://users-react-back-end.vercel.app", {
       name: inputName.current.value,
       age: inputAge.current.value,
     });
