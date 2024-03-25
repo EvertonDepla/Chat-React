@@ -31,7 +31,7 @@
   
   Acesso ao projeto <a href="https://users-react-app-everton.netlify.app" target="_blank">Clique Aqui <a>
   <br>
-  Acesso ao repositório GitHub Back-End <a href="" target="_blank">Clique Aqui <a>
+  Acesso ao repositório GitHub Back-End <a href="https://github.com/EvertonDepla/Users-React-Back-End" target="_blank">Clique Aqui <a>
   
  </p>
 </footer>
